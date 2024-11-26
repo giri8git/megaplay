@@ -1,1 +1,67 @@
-this is test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image with Link</title>
+  <style>
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    /* Container styling */
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Responsive image styling */
+    .responsive-img {
+      max-width: 100%; /* Makes the image resize within its container */
+      height: auto;    /* Maintains aspect ratio */
+      border-radius: 10px; /* Optional: Adds rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow */
+      transition: transform 0.3s ease; /* Adds hover effect */
+    }
+
+    .responsive-img:hover {
+      transform: scale(1.05); /* Zooms the image slightly on hover */
+    }
+
+    /* Link styling */
+    a {
+      text-decoration: none;
+      color: #0073e6; /* Blue color */
+      font-weight: bold;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Responsive Image Example</h1>
+    <!-- Image with link -->
+    <a href="https://www.example.com" target="_blank">
+      <img
+        src="https://via.placeholder.com/600x400"
+        alt="Sample Image"
+        class="responsive-img"
+      />
+    </a>
+    <p>Click the image to visit Example.com</p>
+  </div>
+</body>
+</html>
